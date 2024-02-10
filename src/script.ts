@@ -1,7 +1,10 @@
 const transactionsUl:any = document.querySelector('#transactions')
-const balance = document.querySelector('#balance')
-const moneyPlus = document.querySelector('#money-plus')
-const moneyMinus = document.querySelector('#money-minus')
+const balance = document.querySelector('#balance')!
+const moneyPlus = document.querySelector('#money-plus')!
+const moneyMinus = document.querySelector('#money-minus')!
+const form = document.querySelector('#form')
+const transactionName = document.querySelector('#text')
+const transactionAMount = document.querySelector('#amount')
 
 const transacoesExmp = [
     {id: 1, nome: 'Bolo', amount: -20},
@@ -55,3 +58,9 @@ const init = () =>{
 
 init()
 
+form?.addEventListener('submit', evento =>{
+    evento.preventDefault()
+
+    if(transactionAMount?.ariaValueText.trim === '' || transactionName?.nodeValue?.trim === '')
+    {}
+})
