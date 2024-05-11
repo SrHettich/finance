@@ -6,5 +6,5 @@ const router = (0, express_1.Router)();
 exports.router = router;
 var a = 1;
 router.get('/', (req, res) => {
-    res.render('\page.html');
+    res.render("page");
 });

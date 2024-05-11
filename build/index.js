@@ -11,6 +11,7 @@ exports.server = server;
 server.use(express_1.default.json());
 server.use(routes_1.router);
 server.engine('html', require('ejs').renderFile);
+server.set('view engine', 'html');
 server.listen(process.env.PORT || 4444, () => {
     console.log(`Rodando na porta ${process.env.PORT || 4444}`);
 });

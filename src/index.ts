@@ -7,7 +7,9 @@ server.use(express.json())
 
 server.use(router)
 
-server.engine('html', require('ejs').renderFile)
+server.engine('html', require('ejs').renderFile);
+
+server.set('view engine', 'html');
 
 server.listen(process.env.PORT || 4444, () =>
 {
